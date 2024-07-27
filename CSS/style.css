@@ -4,7 +4,6 @@
     padding: 0;
     box-sizing: border-box;
 
-
 }
 
 @import url('https://fonts.googleapis.com/css2?family=Azeret+Mono:ital,wght@1,600&display=swap');
@@ -113,6 +112,7 @@ footer .redes img {
     margin: 10px;
 
 }
+
 /** ------QUERY FOOTER-----*/
 
 @media screen and (max-width:610px) {
@@ -120,9 +120,11 @@ footer .redes img {
         grid-template-columns: auto auto 35%;
         grid-template-rows: auto auto auto;
     }
+
     .infofooter p {
         margin: 4px;
     }
+
     footer {
         height: auto;
         padding: none;
@@ -130,38 +132,10 @@ footer .redes img {
         flex-direction: column;
         align-items: center;
         text-align: center;
-        
+
     }
 
 }
-
-
-/*fondos home*
-
-
-.maindates {
-    background-image: url(../Img/fondo.jpg);
-    height: 100%;
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
-    background-attachment: fixed;
-    width: 100%;
-    margin: 0%;
-}
-
-.main-multi {
-    background-image: url(../Img/fondo.jpg);
-    height: 100%;
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
-    background-attachment: fixed;
-    width: 100%;
-    margin: 0%;
-}
-
-
 
 /*!---------------INDEX----------------*/
 
@@ -179,7 +153,8 @@ footer .redes img {
         "main main aside"
         "footer footer footer";
 }
-.encabezado{
+
+.encabezado {
     grid-area: header;
 }
 
@@ -208,7 +183,7 @@ footer .redes img {
 }
 
 .home .soundcloud {
-    margin: 15px;
+    margin: 30px;
 }
 
 .home .soundcloud iframe {
@@ -227,18 +202,25 @@ footer .redes img {
 
 }
 
+.aside-index div.propaganda-aside {
+    margin: 15px;
+}
+
+
 .aside-index .card {
     background-color: rgb(20, 20, 20);
     border-radius: 8px;
     border-color: rgb(5, 2, 37);
     border: solid 3px;
+    width: 294px;
+    height: 398px;
 }
 
 .aside-index .home-card {
     color: antiquewhite;
 }
 
-.pie{
+.pie {
     grid-area: footer;
 }
 
@@ -293,6 +275,7 @@ footer .redes img {
             "footer footer";
 
     }
+
     .home {
         flex-wrap: wrap;
         width: auto;
@@ -311,265 +294,463 @@ footer .redes img {
 
 
 /*!---------------DATES----------------*/
-
-
-.dates {
-    background: rgba(0, 0, 0, 0.6);
-    color: whitesmoke;
-    margin-top: 30px;
-    padding-left: 30px;
-    height: auto;
-    width: 100%;
+div.grid-container-dates {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 1fr;
-    grid-template-areas: "info-evento info-evento evento";
-
+    grid-template-columns: auto;
+    grid-template-rows: auto auto 150px;
+    grid-template-areas:
+        "header"
+        "main"
+        "footer";
 }
 
-.info-evento {
-    grid-area: info-evento;
-
-}
-
-.evento {
-    grid-area: evento
+header.encabezadp {
+    grid-area: header;
 }
 
 
+main.maindates {
+    grid-area: main;
+    grid-area: main;
+    background-image: url(../Img/fondo.jpg);
+    height: 100%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    margin: 0%;
+    display: flex;
+    flex-direction: column;
 
-.newdates h2 {
+}
+
+.fondodates {
     color: whitesmoke;
     background: rgba(0, 0, 0, 0.8);
     text-align: center;
     margin-bottom: 20px;
-    padding-top: 10px;
-    padding-bottom: 10px;
+    padding: 10px;
+
+}
+
+.fondoculture h2 {
     font-size: 25px;
 }
 
-.info-evento h2 {
-    margin-top: 15px;
-    margin-bottom: 15px;
-}
-
-.info-evento h3 {
-    margin-top: 15px;
-    margin-bottom: 15px;
-}
-
-.info-evento p {
-    padding-top: 10px;
-}
-
-
-.evento {
-    border: solid 3px rgb(90, 81, 81);
-    background-color: black;
-    text-align: center;
-    margin: 20px;
-    margin-right: 40px;
-    width: 350px;
-    height: 300px;
-}
-
-.evento img {
-    width: 100%;
-    height: 100%;
-    position: relative;
-
-}
-
-.evento a {
-    display: block;
-    text-decoration: none;
+section.date {
+    background: rgba(0, 0, 0, 0.8);
+    height: auto;
+    margin-bottom: 20px;
+    padding: auto;
     color: white;
-    position: absolute;
+    display: flex;
+    flex-direction: row;
+
 }
+
+section.date div.info-date {
+    display: flex;
+    flex-direction: column;
+    width: 70%;
+    padding: 15px;
+    align-items: center;
+}
+
+section.date div.info-date h2 {
+    text-align: center;
+    padding-top: 20px;
+    text-decoration: underline;
+    font-size: 30px;
+
+}
+
+section.date div.info-date h3 {
+    margin: 5px;
+    padding: 10px;
+    font-size: 25px;
+}
+
+section.date div.info-date p {
+    margin: 10px;
+    padding: 10px;
+    font-size: 20px;
+    text-align: justify;
+}
+
+section.date div.info-date iframe {
+    margin: 15px;
+    border-radius: 8px;
+
+}
+
+section.date aside {
+    width: auto;
+    background: rgba(0, 0, 0, 0.6);
+    padding: 35px;
+    display: flex;
+    flex-direction: column;
+}
+
+section.date aside img {
+    border: solid 3px rgb(90, 81, 81);
+    height: 300px;
+    width: 450px;
+    margin-bottom: 30px;
+}
+
+section.date aside button {
+    background-color: aliceblue;
+
+
+}
+
+section.date aside button:hover {
+    background-color: blueviolet;
+    border-radius: 5px;
+}
+
+section.date aside button:active {
+    background-color: rgb(110, 226, 43);
+    border-radius: 5px;
+}
+
+section.date aside button:focus {
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(40, 167, 69, 0.5);
+}
+
+section.date aside button:disabled {
+    background-color: #6c757d;
+    cursor: not-allowed;
+}
+
+footer.pie {
+    grid-area: footer;
+    width: 100%;
+    background-color: #91d1b7;
+    padding-top: 15px;
+    padding-left: 15px;
+    display: flex;
+    justify-content: space-between;
+
+}
+/**-----------Media querys-----------*/
+
+
+
+
+
+
+@media screen and (max-width:920px) {
+    section.date {
+        flex-direction: column;
+    }
+    section.date div.info-date{
+        width: 100%;
+        text-align: justify;
+    }
+    section.date aside{
+        align-items: center;
+    }
+
+    section.date aside button.btn{
+        width: 400px !important;
+
+    }
+
+}
+
+@media screen and (max-width:720px){
+    div.grid-container-dates {
+        display: grid;
+        grid-template-columns: auto;
+        grid-template-rows: auto auto auto;
+        grid-template-areas:
+            "header"
+            "main"
+            "footer";
+    }
+
+    section.date div.info-date iframe{
+        width: 200px;
+        height: 100px;
+    }
+    section.date aside img.artista{
+        height: 200px;
+        width: 350px;
+    }
+    section.date aside button.btn{
+        width: 300px !important;
+
+    }
+}
+
+@media screen and (max-width:375px){
+    section.date aside button.btn{
+        width: 150px !important;
+
+    }
+    iframe{
+        display: none;
+    }
+
+}
+
+
 
 
 
 /*!--------------MULTIMEDIA--------------------*/
 
-.grid-container-multi {
+div.grid-container-multi {
     display: grid;
-    grid-template-columns: auto;
-    grid-template-rows: 100px auto 150px;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto 150px;
     grid-template-areas:
         "header"
         "main"
-        "footer"
-
+        "footer";
 }
 
-.encabezado {
+header.encabezadp {
     grid-area: header;
 }
 
-.main-multi {
+
+main.main-multi {
     grid-area: main;
+    grid-area: main;
+    background-image: url(../Img/fondo.jpg);
+    height: 100%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    margin: 0%;
     display: flex;
     flex-direction: column;
-}
-
-.pie {
-    grid-area: footer;
-}
-
-/*                prueba carrusel*/
-
-.multimedia-carousel {
-    height: 300px;
-    width: 600px;
 
 }
 
-.carousel-inner img .img-carrusel {
-    height: 300px;
-    width: 600px;
-}
-
-
-/*                prueba carrusel*/
-
-.titulomultimedia {
+section.fondomulti {
     color: whitesmoke;
     background: rgba(0, 0, 0, 0.8);
     text-align: center;
     margin-bottom: 20px;
-    padding-top: 10px;
-    padding-bottom: 10px;
+    padding: 10px;
+
 }
 
-.titulomultimedia h2 {
+.fondomulti h2 {
+    font-size: 25px;
+}
+
+section.multimedia {
+    background: rgba(0, 0, 0, 0.5);
+    height: auto;
+    margin-bottom: 20px;
+    padding: auto;
+    color: white;
+    display: flex;
+    flex-direction: column;
+
+}
+
+section.multimedia div.foto-set {
+    display: flex;
+    flex-direction: column;
+    padding-right: 15px;
+    align-items: center;
+    background: rgba(0, 0, 0, 0.8);
+}
+
+section.multimedia div.foto-set h2 {
     text-align: center;
+    padding-top: 20px;
+    margin: 5px;
+    text-decoration: underline;
+    font-size: 30px;
+
+}
+
+section.multimedia div.foto-set h3 {
+    margin: 5px;
+    padding: 10px;
     font-size: 25px;
 }
 
 
-
-.multimedia {
-    background: rgba(0, 0, 0, 0.8);
-    margin-top: 15px;
-    margin-bottom: 15px;
-    height: auto;
+section.multimedia aside {
+    width: auto;
+    background: rgba(0, 0, 0, 0.6);
+    padding: 35px;
     display: flex;
-    align-items: center;
-    flex-direction: column;
-    justify-items: center;
-    justify-content: center;
-}
-
-.multimedia h2 {
-    text-align: center;
-    color: whitesmoke;
-    text-decoration: underline;
-}
-
-/*
-.multimedia aside img {
-
-    width: 100%;
-    height: 100%;
-    padding: 15px;
-    margin: auto;
-
+    flex-direction: row;
+    Justify-content: space-evenly;
 
 }
 
-.multimedia aside a {
-    
-    text-align: center;
-    color: whitesmoke;
-    margin: auto;
-
-}*/
-
-.multimedia aside {
+section.multimedia aside img {
+    border: solid 3px rgb(90, 81, 81);
     height: 350px;
-    width: 600px;
-    display: flex;
-    flex-direction: column;
-    border: solid 5px rgb(90, 81, 81);
-    margin-bottom: 15px;
-    margin-top: 15px;
-    background-color: black;
-    ;
+    width: 170px;
+    margin-bottom: 30px;
 }
 
+
+footer.pie {
+    grid-area: footer;
+    width: 100%;
+    background-color: #91d1b7;
+    padding-top: 15px;
+    padding-left: 15px;
+    display: flex;
+    justify-content: space-between;
+
+}
+
+/**MEDIA QUERYS*/
+
+@media screen and (max-width:800px){
+    section.multimedia aside{
+        flex-direction: column;
+        align-items: center;
+    }
+}
+@media screen and (max-width:612px){
+    div.grid-container-multi {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: auto auto auto;
+        grid-template-areas:
+            "header"
+            "main"
+            "footer";
+    }
+}
+@media screen and (max-width:435px){
+    section.multimedia aside{
+        padding:10px;
+    }
+    section.multimedia aside div.card{
+        margin: 10px !important;
+    }
+}
 
 
 
 /*!------------------MERCHANDISING---------------------*/
 
 
+div.grid-container-merch {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto 150px;
+    grid-template-areas:
+        "header"
+        "main"
+        "footer";
+}
+
+header.encabezadp {
+    grid-area: header;
+}
+
+main.maindates{
+    grid-area: main;
+}
+
+footer.pie{
+    grid-area: footer;
+}
 
 
-.catalogo {
+div.catalogo {
     color: whitesmoke;
-    background: rgba(0, 0, 0, 0.8);
+    background: rgba(0, 0, 0, 0.815);
     text-align: center;
     margin-bottom: 20px;
     padding-top: 10px;
     padding-bottom: 10px;
 }
 
-.catalogo h2 {
-    font-size: 25px;
+div.catalogo h1 {
+    font-size: 30px;
 }
 
-.merch {
-    display: inline-block;
+section.merch {
     text-align: center;
-    width: 80%px;
     border: solid 3px rgb(90, 81, 81);
     background-color: rgba(0, 0, 0, 0.9);
 }
 
 
-.merch img {
-    display: inline-block;
-    width: 200px;
-    height: 200px;
+section.merch section.merch-oficial{
+    display: flex;
+    flex-direction: column;
 }
 
-.producto {
-    display: inline-block;
-    margin: 10px;
-    width: auto;
-    height: auto;
+
+section.merch section.merch-oficial div.producto{
+    text-align: center;
+    padding: 10px;
     border: solid 3px rgb(90, 81, 81);
-    background-color: antiquewhite;
-    text-align: center;
-}
+    background-color: rgba(0, 0, 0, 0.438);
 
-.producto a {
-    display: block;
-    text-align: center;
-    text-decoration: none;
-    background-color: black;
-    display: inline-block;
-    padding: 8px;
+}
+section.merch section.merch-oficial div.producto h2{
     color: whitesmoke;
+    font-size: 25px;
 }
 
-.producto div {
-    margin: 10px;
+section.merch section.merch-oficial div.container-product{
+    display: flex;
+    flex-direction: row;
+    Justify-content: space-around;
+
 }
 
-.producto div span {
-    color: red;
-    text-align: center;
-    display: block;
+/** comienza edicion de las tarjetas*/
+
+
+
+section.merch section.merch-oficial div.container-product p.card-text{
+    font-size: 13px;
 }
 
-.producto div h3 {
-    text-align: center;
+
+
+
+section.merch section.merch-oficial div.container-product li.list-group-item{
+    padding: 5px !important;
+    font-size: 14px;
+    
 }
 
-.producto div p {
-    text-align: center;
-    font-size: 15px;
+section.merch section.merch-oficial div.container-product div.card div.card-body{
+    align-items: center !important;
+}
+
+
+/**MEDIA QUERYS*/
+
+@media screen and (max-width:950px){
+    section.merch section.merch-oficial div.container-product{
+        flex-wrap: wrap;
+    }
+
+    div.grid-container-merch {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: auto auto auto;
+        grid-template-areas:
+            "header"
+            "main"
+            "footer";
+    }
+
+
+
 }
 
 /*!-----------CULTURE------------------*/
@@ -705,13 +886,9 @@ footer .redes img {
 
 
 
-/*(footer)se repite el formato para practicidad, esta codificado arriba del documento*/
-/*se le agrega en esta seccion la class al footer*/
-
 .pie {
     grid-area: footer;
     width: 100%;
-    /*height: 150px;*/
     background-color: #91d1b7;
     padding-top: 15px;
     padding-left: 15px;
@@ -746,16 +923,20 @@ footer .redes img {
         justify-content: space-around;
         align-items: center;
     }
-    .cultureartist .artist h2{
+
+    .cultureartist .artist h2 {
         font-size: 25px;
     }
-    .cultureartist .artist p{
+
+    .cultureartist .artist p {
         font-size: 18px;
     }
-    .fondoculture h2{
+
+    .fondoculture h2 {
         font-size: 20px;
     }
-    .fondoculture p{
+
+    .fondoculture p {
         font-size: 18px;
     }
 
@@ -884,20 +1065,16 @@ footer .redes img {
 }
 
 .academia .curso {
-    /*display: flex;*/
     background-image: url(../Img/fases-produccion-musical.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
-    /*background-attachment:  fixed;*/
-
     padding: 10px;
     border: 3px solid rgb(110, 110, 108);
 
 }
 
 .academia .curso-dos {
-    /*display: flex;*/
     background-image: url(../Img/curso-dj.jpg);
     background-repeat: no-repeat;
     background-size: cover;
@@ -1021,73 +1198,25 @@ footer .redes img {
     }
 }
 
+@media screen and (max-width: 630px) {
+    .nosotros img {
+        width: 420px;
+        height: 280px;
+    }
 
+    textarea {
+        width: 360px;
+        height: 150px;
+    }
+
+}
+
+@media screen and (max-width: 550px) {
+    .nosotros img {
+        width: 380px;
+        height: 240px;
+    }
+}
 
 
 /*! hasta aquiii---------------------------------------------*/
-/*
-.grid-container-prueba{
-    display: grid;
-    grid-template-columns: auto;
-    grid-template-rows: 100px auto 150px;
-    grid-template-areas:
-        "header"
-        "main"       
-        "footer"
-}
-
-.prueba-head{
-    grid-area: header;
-}
-
-.prueba-main{
-    grid-area: main;
-}
-.prueba-fot{
-    grid-area: footer;
-}
-.prueba-multimedia{
-background: rgba(0, 0, 0, 0.8);
-    margin-top: 15px;
-    margin-bottom: 15px;
-    height: auto;
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-    justify-items: center;
-    justify-content: center;
-}
-
-.prueba-multimedia .galeria{
-    height: auto;
-    width: 45%;
-    margin: 15px;
-}
-
-.prueba-multimedia .galeria img{
-    height: 350px;
-    width: 55%;
-}
-.prueba-multimedia{
-background: rgba(0, 0, 0, 0.8);
-    margin-top: 15px;
-    margin-bottom: 15px;
-    height: auto;
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-    justify-items: center;
-    justify-content: center;
-}
-
-.prueba-multimedia .galeria{
-    height: auto;
-    width: 45%;
-    margin: 15px;
-}
-
-.prueba-multimedia .galeria img{
-    height: 350px;
-    width: 55%;
-}
-*/

@@ -1,0 +1,471 @@
+/*!----INDEX------*/
+
+div.grid-container-home {
+    background-image: url(../Img/fondo.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    display: grid;
+    grid-template-columns: auto auto 35%;
+    grid-template-rows: auto auto 150px;
+    grid-template-areas:
+        "header header header"
+        "main main aside"
+        "footer footer footer";
+
+    header.encabezado {
+        grid-area: header;
+    }
+
+    main.home {
+        grid-area: main;
+        display: flex;
+        flex-direction: column;
+        justify-items: center;
+        justify-content: center;
+        align-items: center;
+        padding: 15px;
+
+        section.carrusel-home {
+            height: 50%;
+            width: 70%;
+            margin: 15px;
+
+            div#carouselExampleCaptions {
+                div.carousel-inner {
+                    height: 100%;
+                    width: 100%;
+                    border-radius: 8px;
+                    border-color: rgb(5, 2, 37);
+                    border: solid 3px;
+                    div.carousel-item .active{
+                        
+                        img.d-block .w-100 .prueba-img-carrusel{
+                            height: 100%;
+                            width: 100%;
+
+                        }
+                    }
+                }
+
+
+            }
+        }
+
+        section.soundcloud {
+            margin: 15px;
+
+            iframe {
+                height: 250px;
+                width: 450px;
+                margin: 15px;
+            }
+
+        }
+
+    }
+
+    aside.aside-index {
+        background: rgba(0, 0, 0, 0.6);
+        grid-area: aside;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-items: center;
+        justify-content: center;
+
+        div.propaganda-aside {
+            display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-items: center;
+        justify-content: center;
+        margin: 30px;
+            
+            div.card {
+                background-color: rgb(20, 20, 20);
+                border-radius: 8px;
+                border-color: rgb(5, 2, 37);
+                border: solid 3px;
+                width: 75%;
+                width: 294px;
+                height: 398px;
+
+                div.home-card {
+                    color: antiquewhite;
+
+                    p{
+                        font-size: 13px;
+                    }
+                }
+
+            }
+        }
+
+    }
+
+    footer.pie {
+        grid-area: footer;
+    }
+}
+
+
+/*!----DATES------*/
+
+/*!----MULTIMEDIA------*/
+
+/*!----CULTURE------*/
+
+div.grid-container-culture {
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: auto auto 150px;
+    grid-template-areas:
+        "header"
+        "main"
+        "footer";
+
+    header.encabezado {
+        grid-area: header;
+    }
+
+    main.mainculture {
+        grid-area: main;
+        background-image: url(../Img/fondo.jpg);
+        height: 100%;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+        background-attachment: fixed;
+        margin: 0%;
+        display: flex;
+        flex-direction: column;
+
+
+        section.fondoculture {
+            color: whitesmoke;
+            background: rgba(0, 0, 0, 0.8);
+            text-align: center;
+            margin-bottom: 20px;
+            padding: 10px;
+
+            h2 {
+                font-size: 25px;
+            }
+        }
+
+        article.cultureartist {
+            background: rgba(0, 0, 0, 0.6);
+            height: auto;
+            margin-bottom: 20px;
+            padding: auto;
+            color: white;
+            display: flex;
+            flex-direction: row;
+
+            
+
+            div.artist {
+                display: flex;
+                flex-direction: column;
+                width: auto;
+                padding-right: 15px;
+
+                h2 {
+                    text-align: center;
+                    padding-top: 20px;
+                    text-decoration: underline;
+                    font-size: 30px;
+                }
+
+                p {
+                    margin: 10px;
+                    padding: 15px;
+                    font-size: 15px;
+                    text-align: justify;
+                }
+            }
+
+            aside {
+                width: auto;
+                background: rgba(0, 0, 0, 0.6);
+                padding: 35px;
+                display: flex;
+                flex-direction: column;
+
+                img {
+                    border: solid 3px rgb(90, 81, 81);
+                    height: 220px;
+                    width: 300px;
+                    margin-bottom: 30px;
+                }
+
+                iframe {
+                    width: 300px;
+                    height: 200px;
+                }
+            }
+
+
+        }
+        section.aside-culture {
+            grid-area: aside-culture;
+            background: rgba(0, 0, 0, 0.6);
+            display: flex;
+            flex-direction: row;
+            justify-content: space-around;
+            justify-items: center;
+            flex-wrap: wrap;
+            height: auto;
+
+            div.card {
+                margin: 25px;
+                text-align: center;
+                
+
+                img.card-img-top {
+                    width: 100%;
+                    height: 150px;
+                }
+
+                div.card-body {
+                    h5 {
+                        text-decoration: underline;
+                        font-weight: bold
+                    }
+
+                    a.card-link {
+                        font-weight: bold;
+                        text-decoration: none;
+                    }
+                }
+            }
+        }
+
+        footer.pie {
+            grid-area: footer;
+        }
+    }
+}
+
+/*!----MERCHANDISING------*/
+
+/*!----NOSOTROS------*/
+
+div .grid-container-contacto {
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: 100px auto 150px;
+    grid-template-areas:
+        "header"
+        "main"
+        "footer";
+
+    header .encabezado {
+        grid-area: header;
+    }
+
+    main .main-contacto {
+        grid-area: main;
+        background-image: url(../Img/fondo.jpg);
+        height: 100%;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+        background-attachment: fixed;
+        width: 100%;
+        margin: 0%;
+
+        div .vision {
+            display: flex;
+            justify-content: center;
+            height: 100px;
+            background-color: rgba(0, 0, 0, 0.9);
+            align-items: center;
+            color: whitesmoke;
+
+            h2 {
+                font-size: 30px;
+            }
+        }
+
+        section.nosotros {
+            background: rgba(0, 0, 0, 0.6);
+            border: 3px solid rgb(110, 110, 108);
+            color: whitesmoke;
+            margin-bottom: 25px;
+            padding-top: 15px;
+            display: flex;
+            flex-direction: row;
+            font-size: 18px;
+            padding: 10px;
+            text-shadow:
+                -1px -1px 0 black,
+                1px -1px 0 black,
+                -1px 1px 0 black,
+                1px 1px 0 black;
+
+            p {
+                margin: 5px;
+                padding-right: 10px;
+                text-align: justify;
+            }
+
+            img {
+                width: 530px;
+                height: 340px;
+                border: solid 2.5px rgb(90, 81, 81);
+                text-align: justify;
+                margin: 10px;
+            }
+        }
+
+        div.escuela {
+            background-color: rgba(0, 0, 0, 0.6);
+
+            div.clases {
+                display: flex;
+                justify-content: center;
+                height: 100px;
+                background-color: rgba(0, 0, 0, 0.8);
+                align-items: center;
+                color: whitesmoke;
+
+                h2 {
+                    font-size: 30px;
+                }
+            }
+
+            section.academia {
+                display: flex;
+                flex-direction: row;
+                background-color: rgba(0, 0, 0, 0.7);
+
+                div.curso {
+                    background-image: url(../Img/fases-produccion-musical.jpg);
+                    background-repeat: no-repeat;
+                    background-size: cover;
+                    background-position: center;
+                    padding: 10px;
+                    border: 3px solid rgb(110, 110, 108);
+
+                    h3 {
+                        text-align: center;
+                        font-size: 26px;
+                        text-shadow:
+                            -1px -1px 0 rgb(248, 246, 246),
+                            1px -1px 0 rgb(248, 246, 246),
+                            -1px 1px 0 rgb(248, 246, 246),
+                            1px 1px 0 rgb(248, 246, 246);
+                    }
+
+                    p {
+                        padding: 10px;
+                        font-size: 18px;
+                        color: whitesmoke;
+                        text-shadow:
+                            -1px -1px 0 black,
+                            1px -1px 0 black,
+                            -1px 1px 0 black,
+                            1px 1px 0 black;
+                    }
+
+                    a {
+                        text-decoration: none;
+                        background-color: black;
+                        color: rgb(207, 76, 185);
+                        margin-left: 10px;
+                    }
+                }
+
+                div.curso-dos {
+                    background-image: url(../Img/curso-dj.jpg);
+                    background-repeat: no-repeat;
+                    background-size: cover;
+                    background-position: center;
+                    font-size: 18px;
+                    padding: 10px;
+                    border: 3px solid rgb(110, 110, 108);
+                    border-left: none;
+
+                    h3 {
+                        text-align: center;
+                        font-size: 26px;
+                        text-shadow:
+                            -1px -1px 0 rgb(248, 246, 246),
+                            1px -1px 0 rgb(248, 246, 246),
+                            -1px 1px 0 rgb(248, 246, 246),
+                            1px 1px 0 rgb(248, 246, 246);
+                    }
+
+                    p {
+                        padding: 10px;
+                        font-size: 18px;
+                        color: whitesmoke;
+                        text-shadow:
+                            -1px -1px 0 black,
+                            1px -1px 0 black,
+                            -1px 1px 0 black,
+                            1px 1px 0 black;
+                    }
+
+                    a {
+                        text-decoration: none;
+                        background-color: black;
+                        color: rgb(207, 76, 185);
+                        margin-left: 10px;
+                    }
+                }
+            }
+
+            div.contacto {
+                background: rgba(0, 0, 0, 0.6);
+                color: whitesmoke;
+
+                div.equipo {
+                    background-color: rgba(0, 0, 0, 0.8);
+                    padding-top: 15px;
+                    padding-bottom: 15px;
+                    text-align: center;
+                    border: 3px solid rgb(110, 110, 108);
+                    border-top: none;
+
+                    h2 {
+                        font-size: 25px;
+                    }
+                }
+
+                div.msj {
+                    padding-top: 15px;
+                    padding-bottom: 30px;
+                    padding-left: 30px;
+                    display: flex;
+                    flex-direction: column;
+
+                    div.nombre-completo {
+                        display: flex;
+                        flex-direction: column;
+                        align-items: baseline;
+                    }
+
+                    div.e-mail {
+                        display: flex;
+                        flex-direction: column;
+                        align-items: baseline;
+                    }
+
+                    div.texto {
+                        display: flex;
+                        flex-direction: column;
+                        align-items: baseline;
+                    }
+                }
+            }
+        }
+    }
+
+    footer.pie {
+        grid-area: footer;
+    }
+}

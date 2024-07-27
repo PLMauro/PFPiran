@@ -8,110 +8,134 @@
     <link rel="stylesheet" href="../CSS/style.css">
     <!-- ! link bootstrap / en el head -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
-    integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
 
 </head>
 
 <body>
-    <header>
-        <!--Header con fondo oscuro y logo de la productora-->
-        <h1> EXIT </h1>
-        <nav>
-            <ul>
-                <li><a href="../index.html"> HOME </a></li>
-                <li><a href="./dates.html">DATES</a></li>
-                <li><a href="./multimedia.html">MULTIMEDIA</a></li>
-                <li><a href="./culture.html">CULTURE</a></li>
-                <li><a href="./merchandising.html">MERCHANDISING</a></li>
-                <li><a href="./contacto.html">CONTACTO</a></li>
-            </ul>
-    </header>
+    <div class="grid-container-dates">
+
+        <header class="encabezado">
+            <nav class="navbar navbar-expand-lg bg-body-tertiary">
+                <div class="container-fluid">
+                    <a class="navbar-brand" href="#">EXIT</a>
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false"
+                        aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                        <div class="navbar-nav">
+                            <a class="nav-link active" aria-current="page" href="../index.html">HOME</a>
+                            <a class="nav-link" href="./dates.html">DATES</a>
+                            <a class="nav-link" href="./multimedia.html">MULTIMEDIA</a>
+                            <a class="nav-link" href="./culture.html">CULTURE</a>
+                            <a class="nav-link" href="./merchandising.html">MERCHANDISING</a>
+                            <a class="nav-link" href="./contacto.html">NOSOTROS</a>
+                        </div>
+                    </div>
+                </div>
+            </nav>
+        </header>
 
 
-    <main class="maindates">
-        <!--INFO DE NUEVAS FECHAS con enlace a direccion de pagina de venta de entradas-->
-        <section class="newdates">
-            <h2>
-                NUEVAS FECHAS
-            </h2>
-        </section>
-        <section class="eventos">
-            <section class="dates">
-                <div class="info-evento">
+        <main class="maindates">
+            <section class="fondodates">
+                <h2>
+                    Proximas Fechas
+                </h2>
+
+            </section>
+            <!--fecha-->
+
+
+            <section class="date">
+                <div class="info-date">
                     <h2>COCOON</h2>
-                    <h3>24/12/2023</h3>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ut repellat fugit magnam Ut repellat
-                        fugit magnam iste voluptates laudantium.Ut repellat fugit magnam. orem ipsum dolor sit amet,
-                        consectetur adipisicing elitorem ipsum dolor sit amet, consectetur adipisicing elit
+                    <h3>24/10/2024</h3>
+                    <p>Sumérgete en una experiencia única e inolvidable con la vibrante energía de Cocoon Records, la
+                        renombrada productora de música electrónica fundada por el legendario Sven Väth. Este evento
+                        especial se llevará a cabo en la hermosa ciudad de Montevideo, Uruguay, uniendo a los amantes de
+                        la música electrónica para una noche de ritmos intensos, visuales hipnóticos y una atmósfera
+                        electrizante.
                     </p>
+                    <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d13095.623376667092!2d-56.0468666!3d-34.8585931!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x959f87641215fb31%3A0x22bcffdece6f36df!2sHANGAR%2033!5e0!3m2!1ses-419!2suy!4v1721965066755!5m2!1ses-419!2suy"
+                        width="300" height="200" style="border:0;" allowfullscreen="" loading="lazy"
+                        referrerpolicy="no-referrer-when-downgrade"></iframe>
                 </div>
-                <aside class="evento">
-                    <img src="../Img/cocoon-23.png">
-                    <a href="https://www.passline.com.uy" target="_blank">Enlace para comprar entrada</a>
+                <aside>
+                    <img src="../Img/cocoon-23.png" class="img-fluid artista">
+                    <button type="button" class="btn btn-link"><a href="https://www.passline.com.uy"
+                            target="_blank">COMPRAR</a></button>
                 </aside>
             </section>
+            <!--fecha-->
 
-            <!--otro evento-->
 
-            <section class="dates">
-                <div class="info-evento">
+            <section class="date">
+                <div class="info-date">
                     <h2>AFTERLIFE</h2>
-                    <h3>24/12/2023</h3>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ut repellat fugit magnam
-                        Ut repellat fugit magnam iste voluptates laudantium.Ut repellat fugit magnam.
-                        orem ipsum dolor sit amet, consectetur adipisicing elitorem ipsum dolor sit amet,
-                        consectetur adipisicing elitLorem ipsum dolor sit amet, consectetur adipisicing elit. Ut
-                        repellat fugit magnam
-                        Ut repellat fugit magnam iste voluptates laudantium.Ut repellat fugit magnam.
-                        orem ipsum dolor sit amet, consectetur adipisicing elitorem ipsum dolor sit amet,
-                        consectetur adipisicing elit
+                    <h3>14/12/2024</h3>
+                    <p>
+                        Únete a nosotros para una noche inolvidable con Afterlife, la aclamada serie de eventos de
+                        música electrónica. Este evento exclusivo en Montevideo te llevará a un viaje sensorial con sets
+                        profundos y emotivos de DJs de renombre mundial.
                     </p>
+                    <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d13095.623376667092!2d-56.0468666!3d-34.8585931!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x959f87641215fb31%3A0x22bcffdece6f36df!2sHANGAR%2033!5e0!3m2!1ses-419!2suy!4v1721965066755!5m2!1ses-419!2suy"
+                        width="300" height="200" style="border:0;" allowfullscreen="" loading="lazy"
+                        referrerpolicy="no-referrer-when-downgrade"></iframe>
                 </div>
-                <aside class="evento">
-                    <img src="../Img/evento2.jpg">
-                    <a href="https://www.passline.com.uy" target="_blank">Enlace para comprar entrada</a>
+                <aside>
+                    <img src="../Img/evento2.jpg" class="img-fluid artista">
+                    <button type="button" class="btn btn-link"><a href="https://www.passline.com.uy"
+                            target="_blank">COMPRAR</a></button>
                 </aside>
             </section>
 
-            <!--otro evento-->
-
-            <section class="dates">
-                <div class="info-evento">
-                    <h2>KEY-CONFERENCE</h2>
-                    <h3>24/12/2023</h3>
-
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ut repellat fugit magnam
-                        Ut repellat fugit magnam iste voluptates laudantium.Ut repellat fugit magnam.
-                        orem ipsum dolor sit amet, consectetur adipisicing elitorem ipsum dolor sit amet,
-                        consectetur adipisicing elitLoregit magnam.
-                        orem ipsum dolor sit amet, consectetur adipisicing elitorem ipsum dolor sit amet,
-                        consectetur adipisicing elit
+            <!--fecha-->
+            <section class="date">
+                <div class="info-date">
+                    <h2>PM Open AIR</h2>
+                    <h3>17/01/2025</h3>
+                    <p>
+                        ¡Prepárate para una noche mágica bajo las estrellas! Este verano 2025, PM Open Air te trae a
+                        Punta del Este una experiencia inolvidable con el legendario DJ Paul Kalkbrenner como estrella
+                        central. Disfruta de los mejores beats electrónicos en un ambiente vibrante y lleno de energía
+                        veraniega.
                     </p>
+                    <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d6377.69741035073!2d-54.881077403726536!3d-34.91213839327448!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x957505cfb97a197d%3A0x2a91f200885d90a!2sOpen%20Park!5e0!3m2!1ses-419!2suy!4v1721966486393!5m2!1ses-419!2suy"
+                        width="300" height="200" style="border:0;" allowfullscreen="" loading="lazy"
+                        referrerpolicy="no-referrer-when-downgrade"></iframe>
                 </div>
-                <aside class="evento">
-                    <img src="../Img/evento3.jpg">
-                    <a href="https://www.passline.com.uy" target="_blank">Enlace para comprar entrada</a>
+                <aside>
+                    <img src="../Img/PMOPENAIR.jpg" class="img-fluid artista">
+                    <button type="button" class="btn btn-link"><a href="https://www.passline.com.uy"
+                            target="_blank">COMPRAR</a></button>
+
                 </aside>
             </section>
-        </section>
-    </main>
+        </main>
 
-    <footer>
-        <!--footer con info sobre redes sociales y contacto-->
-        <div class="infofooter">
-            <p>productoraeventos@gmail.com</p>
-            <p>Aconcagua 1409</p>
-            <p>CP 14700</p>
-            <p>podes encontrarnos en nuestras redes sociales</p>
-        </div>
+        <footer class="pie">
+            <!--footer con info sobre redes sociales y contacto-->
+            <div class="infofooter">
+                <p>productoraeventos@gmail.com</p>
+                <p>Aconcagua 1409</p>
+                <p>CP 14700</p>
+                <p>podes encontrarnos en nuestras redes sociales</p>
+            </div>
 
-        <div class="redes">
-            <a href="https://www.instagram.com" target="_blank"><img src="../Img/instagram.png" alt="instagram"></a>
-            <a href="https://www.twitter.com" target="_blank"><img src="../Img/twitter.png " alt="twitter"></a>
-            <a href="https://facebook.com" target="_blank"><img src="../Img/facebook.png" alt="facebook"></a>
-            <a href="https://www.youtube.com" target="_blank"><img src="../Img/youtube.png" alt="youtube"></a>
-        </div>
-    </footer>
+            <div class="redes">
+                <a href="https://www.instagram.com" target="_blank"><img src="../Img/instagram.png" alt="instagram"></a>
+                <a href="https://www.twitter.com" target="_blank"><img src="../Img/twitter.png " alt="twitter"></a>
+                <a href="https://facebook.com" target="_blank"><img src="../Img/facebook.png" alt="facebook"></a>
+                <a href="https://www.youtube.com" target="_blank"><img src="../Img/youtube.png" alt="youtube"></a>
+            </div>
+        </footer>
+    </div>
     <!-- ! link javascript / en el body, abajo del footer -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"

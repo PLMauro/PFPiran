@@ -8,168 +8,270 @@
     <link rel="stylesheet" href="../CSS/style.css">
     <!-- ! link bootstrap / en el head -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
-    integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
 
 </head>
 
 <body>
-    <header>
-        <!--Header con fondo oscuro y logo de la productora-->
-        <h1> EXIT </h1>
-        <nav>
-            <ul>
-                <li><a href="../index.html"> HOME </a></li>
-                <li><a href="./dates.html">DATES</a></li>
-                <li><a href="./multimedia.html">MULTIMEDIA</a></li>
-                <li><a href="./culture.html">CULTURE</a></li>
-                <li><a href="./merchandising.html">MERCHANDISING</a></li>
-                <li><a href="./contacto.html">CONTACTO</a></li>
-            </ul>
-        </nav>
-    </header>
-    <main class="maindates">
-        <!--Comienzo de tienda online-->
-        <div class="catalogo">
-            <h2>Merchandising oficial</h2>
-        </div>
-        <!--producto-->
-        <section class="merch">
+    <div class="grid-container-merch">
 
 
-            <section class="producto">
-                <img src="../Img/remera.jpg" alt="remera">
-                <div>
-                    <h3>Remera</h3>
-                    <p>(S-M-L-XL)</p>
-                    <span>$950.00</span>
-                    <a href="https://www.mercadopago.com.uy" target="_blank"> Comprar </a>
+
+
+        <header class="encabezado">
+            <nav class="navbar navbar-expand-lg bg-body-tertiary">
+                <div class="container-fluid">
+                    <a class="navbar-brand" href="#">EXIT</a>
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false"
+                        aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                        <div class="navbar-nav">
+                            <a class="nav-link active" aria-current="page" href="../index.html">HOME</a>
+                            <a class="nav-link" href="./dates.html">DATES</a>
+                            <a class="nav-link" href="./multimedia.html">MULTIMEDIA</a>
+                            <a class="nav-link" href="./culture.html">CULTURE</a>
+                            <a class="nav-link" href="./merchandising.html">MERCHANDISING</a>
+                            <a class="nav-link" href="./contacto.html">NOSOTROS</a>
+                        </div>
+                    </div>
                 </div>
-            </section>
+            </nav>
+        </header>
+        <main class="maindates">
+            <!--Comienzo de tienda online-->
+            <div class="catalogo">
+                <h1>Merchandising oficial</h1>
+            </div>
+            <!-- contenedor productos-->
+            <section class="merch">
+                <section class="merch-oficial">
 
-            <!--producto-->
+                    <!-- seccion productos-->
 
-            <section class="producto">
-                <img src="../Img/gorra.jpg" alt="gorra">
-                <div>
-                    <h3>Gorra</h3>
-                    <span>$690</span>
-                    <a href="https://www.mercadopago.com.uy" target="_blank"> Comprar </a>
-                </div>
-            </section>
+                    <div class="producto">
+                        <h2>Prendas oficiales</h2>
+                    </div>
 
-            <!--producto-->
+                    <div class="container-product">
 
-            <section class="producto">
-                <img src="../img/abanico.jpg" alt="abanico">
-                <div>
-                    <h3>Abanico</h3>
-                    <span>$700</span>
-                    <a href="https://www.mercadopago.com.uy" target="_blank"> Comprar </a>
-                </div>
-            </section>
+                        <!--producto-->
+                        <div class="card" style="width: 15rem;">
+                            <img src="../Img/buzo.png" class="card-img-top" alt="buzo oficial de la marca">
+                            <div class="card-body">
+                                <h5 class="card-title">BUZO</h5>
+                                <p class="card-text">Buzo de algodón oficial, cómodo y estilizado, con el icónico logo
+                                    de nuestra marca.</p>
+                            </div>
+                            <ul class="list-group list-group-flush">
+                                <li class="list-group-item">XL-L-M-S</li>
+                                <li class="list-group-item">$2500</li>
+                            </ul>
+                            <div class="card-body">
+                                <a href="http://mercadolibre.com.uy" class="card-link">Comprar</a>
+                            </div>
+                        </div>
 
-            <!--producto-->
+                        <!--producto-->
+                        <div class="card" style="width: 15rem;">
+                            <img src="../Img/canguro.png" class="card-img-top" alt="canguro oficial de la marca">
+                            <div class="card-body">
+                                <h5 class="card-title">CANGURO</h5>
+                                <p class="card-text">Canguro de algodón con capucha oficial, suave y estilizado, con el
+                                    distintivo logo de nuestra marca. Ideal para cualquier ocasión, o salir de fiesta!.
+                                    .</p>
+                            </div>
+                            <ul class="list-group list-group-flush">
+                                <li class="list-group-item">XL-L-M-S</li>
+                                <li class="list-group-item">$2750</li>
+                            </ul>
+                            <div class="card-body">
+                                <a href="http://mercadolibre.com.uy" class="card-link">Comprar</a>
+                            </div>
+                        </div>
 
-            <section class="producto">
-                <img src="../Img/canguro.jpg" alt="canguro">
-                <div>
-                    <h3>Canguro</h3>
-                    <p>(S-M-L-XL)</p>
-                    <span>$1680</span>
-                    <a href="https://www.mercadopago.com.uy" target="_blank"> Comprar </a>
-                </div>
-            </section>
+                        <!--producto-->
 
-            <!--producto-->
+                        <div class="card" style="width: 15rem;">
+                            <img src="../Img/remera.png" class="card-img-top" alt="remera oficial de la marca">
+                            <div class="card-body">
+                                <h5 class="card-title">REMERA</h5>
+                                <p class="card-text">Remera de algodón oficial. Suave y estilizada, con el
+                                    distintivo logo de nuestra marca.
+                                    .</p>
+                            </div>
+                            <ul class="list-group list-group-flush">
+                                <li class="list-group-item">XL-L-M-S</li>
+                                <li class="list-group-item">$1800</li>
+                            </ul>
+                            <div class="card-body">
+                                <a href="http://mercadolibre.com.uy" class="card-link">Comprar</a>
+                            </div>
+                        </div>
 
-            <section class="producto">
-                <img src="../img/buzo.jpg" alt="buzo">
-                <div>
-                    <h3>Buzo</h3>
-                    <p>(S-M-L-XL)</p>
-                    <span>$1680</span>
-                    <a href="https://www.mercadopago.com.uy" target="_blank"> Comprar </a>
-                </div>
-            </section>
+                    </div>
 
-            <!--producto-->
+                </section>
 
-            <section class="producto">
-                <img src="../img/mochila.jpg" alt="mochila">
-                <div>
-                    <h3>Mochila</h3>
-                    <span>$1490</span>
-                    <a href="https://www.mercadopago.com.uy" target="_blank"> Comprar </a>
-                </div>
-            </section>
+                <!-- seccion productos-->
 
-            <!--producto-->
+                <section class="merch-oficial">
+                    <div class="producto">
+                        <h2>Vinilos</h2>
+                    </div>
 
-            <section class="producto">
-                <img src="../img/vinilo1.jpg" alt="vinilo">
-                <div>
-                    <h3>Vinilo</h3>
-                    <span>$2180</span>
-                    <a href="https://www.mercadopago.com.uy" target="_blank"> Comprar </a>
-                </div>
-            </section>
+                    <div class="container-product">
 
-            <!--producto-->
+                        <!--producto-->
 
-            <section class="producto">
-                <img src="../img/vinilo2.jpg" alt="vinilo">
-                <div>
-                    <h3>Vinilo</h3>
-                    <span>$2180</span>
-                    <a href="https://www.mercadopago.com.uy" target="_blank"> Comprar </a>
-                </div>
-            </section>
+                        <div class="card" style="width: 15rem;">
+                            <img src="../Img/vinilo1.png" class="card-img-top" alt="vinilo artista 1">
+                            <div class="card-body">
+                                <h5 class="card-title">Beirut</h5>
+                                <p class="card-text">Descubre el potente sonido de Victor Ruiz con su lanzamiento "Beirut". ¡Una joya para los amantes del techno!</p>
+                            </div>
+                            <ul class="list-group list-group-flush">
+                                <li class="list-group-item">$2200</li>
+                            </ul>
 
-            <!--producto-->
+                            <div class="card-body">
+                                <a href="http://mercadolibre.com.uy" class="card-link">Comprar</a>
+                            </div>
+                        </div>
 
-            <section class="producto">
-                <img src="../img/vinilo3.jpg" alt="vinilo">
-                <div>
-                    <h3>vinilo</h3>
-                    <span>$2180</span>
-                    <a href="https://www.mercadopago.com.uy" target="_blank"> Comprar </a>
-                </div>
-            </section>
+                        <!--producto-->
 
-            <!--producto-->
+                        <div class="card" style="width: 15rem;">
+                            <img src="../Img/vinilo2.png" class="card-img-top" alt="vinilo artista 2">
+                            <div class="card-body">
+                                <h5 class="card-title">Conjure Infinity</h5>
+                                <p class="card-text">Explora las profundidades del sonido electrónico con "Conjure Infinity" de Maceo Plex. Este vinilo captura la esencia única de su estilo innovador, fusionando ritmos hipnóticos y melodías envolventes. Imprescindible para cualquier colección..</p>
+                            </div>
+                            <ul class="list-group list-group-flush">
+                                <li class="list-group-item">$2200</li>
+                            </ul>
+                            <div class="card-body">
+                                <a href="http://mercadolibre.com.uy" class="card-link">Comprar</a>
+                            </div>
+                        </div>
 
-            <section class="producto">
-                <img src="../img/vinilo4.jpg" alt="vinilo4">
-                <div>
-                    <h3>Vinilo</h3>
-                    <span>$2180</span>
-                    <a href="https://www.mercadopago.com.uy" target="_blank"> Comprar </a>
-                </div>
-            </section>
+                        <!--producto-->
 
-        </section>
+                        <div class="card" style="width: 15rem;">
+                            <img src="../Img/vinilo3.png" class="card-img-top" alt="vinilo artista 3">
+                            <div class="card-body">
+                                <h5 class="card-title">Simulator Remixes</h5>
+                                <p class="card-text">Disfruta de los electrizantes remixes de "Simulator". Una colaboración imprescindible para los fans del techno y la música electrónica..</p>
+                            </div>
+                            <ul class="list-group list-group-flush">
+                                <li class="list-group-item">$2200</li>
+                            </ul>
+                            <div class="card-body">
+                                <a href="http://mercadolibre.com.uy" class="card-link">Comprar</a>
+                            </div>
+                        </div>
+                    </div>
+
+                </section>
+
+                <!-- seccion productos-->
+
+                <section class="merch-oficial">
+                    <div class="producto">
+                        <h2>Varios</h2>
+                    </div>
+
+                    <div class="container-product">
+
+                        <!--producto-->
+
+                        <div class="card" style="width: 15rem;">
+                            <img src="../Img/tapones.png" class="card-img-top" alt="tapones para fiestas">
+                            <div class="card-body">
+                                <h5 class="card-title">Tapones para oidos</h5>
+                                <p class="card-text">Protege tu audición sin perder calidad de sonido. Tapones cómodos y reutilizables, perfectos para fiestas y conciertos electrónicos.</p>
+                            </div>
+                            <ul class="list-group list-group-flush">
+                                <li class="list-group-item">color unico</li>
+                                <li class="list-group-item">$1680</li>
+                            </ul>
+                            <div class="card-body">
+                                <a href="http://mercadolibre.com.uy" class="card-link">Comprar</a>
+                            </div>
+                        </div>
+
+                        <!--producto-->
+
+                        <div class="card" style="width: 15rem;">
+                            <img src="../Img/mochila.png" class="card-img-top" alt="mochila para salir de fiesta">
+                            <div class="card-body">
+                                <h5 class="card-title">Mochila oficial</h5>
+                                <p class="card-text">Práctica y estilizada, ideal para el uso diario. Con amplio espacio y diseño duradero, lleva tu marca favorita contigo..</p>
+                            </div>
+                            <ul class="list-group list-group-flush">
+                                <li class="list-group-item">An item</li>
+                                <li class="list-group-item">A second item</li>
+                                <li class="list-group-item">A third item</li>
+                            </ul>
+                            <div class="card-body">
+                                <a href="http://mercadolibre.com.uy" class="card-link">Comprar</a>
+                            </div>
+                        </div>
+
+                        <!--producto-->
+
+                        <div class="card" style="width: 15rem;">
+                            <img src="../Img/gorra.png" class="card-img-top" alt="gorra oficial">
+                            <div class="card-body">
+                                <h5 class="card-title">Gorra de vicera</h5>
+                                <p class="card-text">Estilo y comodidad en una gorra de visera ajustable con el icónico logo de nuestra marca. Ideal para cualquier ocasión.</p>
+                            </div>
+                            <ul class="list-group list-group-flush">
+                                <li class="list-group-item">An item</li>
+                                <li class="list-group-item">A second item</li>
+                                <li class="list-group-item">A third item</li>
+                            </ul>
+                            <div class="card-body">
+                                <a href="http://mercadolibre.com.uy" class="card-link">Comprar</a>
+                            </div>
+                        </div>
+                    </div>
+
+
+                </section>
+
     </main>
-    <footer>
-        <!--footer con info sobre redes sociales y contacto-->
-        <div class="infofooter">
-            <p>productoraeventos@gmail.com</p>
-            <p>Aconcagua 1409</p>
-            <p>CP 14700</p>
-            <p>podes encontrarnos en nuestras redes sociales</p>
-        </div>
 
-        <div class="redes">
-            <a href="https://www.instagram.com" target="_blank"><img src="../Img/instagram.png" alt="instagram"></a>
-            <a href="https://www.twitter.com" target="_blank"><img src="../Img/twitter.png " alt="twitter"></a>
-            <a href="https://facebook.com" target="_blank"><img src="../Img/facebook.png" alt="facebook"></a>
-            <a href="https://www.youtube.com" target="_blank"><img src="../Img/youtube.png" alt="youtube"></a>
-        </div>
-    </footer>
+
+                <footer class="pie">
+                    <!--footer con info sobre redes sociales y contacto-->
+                    <div class="infofooter">
+                        <p>productoraeventos@gmail.com</p>
+                        <p>Aconcagua 1409</p>
+                        <p>CP 14700</p>
+                        <p>podes encontrarnos en nuestras redes sociales</p>
+                    </div>
+
+                    <div class="redes">
+                        <a href="https://www.instagram.com" target="_blank"><img src="../Img/instagram.png"
+                                alt="instagram"></a>
+                        <a href="https://www.twitter.com" target="_blank"><img src="../Img/twitter.png "
+                                alt="twitter"></a>
+                        <a href="https://facebook.com" target="_blank"><img src="../Img/facebook.png"
+                                alt="facebook"></a>
+                        <a href="https://www.youtube.com" target="_blank"><img src="../Img/youtube.png"
+                                alt="youtube"></a>
+                    </div>
+                </footer>
+    </div>
+    
     <!-- ! link javascript / en el body, abajo del footer -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
         crossorigin="anonymous"></script>
-    
+
 </body>
 
 </html>
