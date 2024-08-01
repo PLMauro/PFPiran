@@ -311,7 +311,6 @@ header.encabezadp {
 
 main.maindates {
     grid-area: main;
-    grid-area: main;
     background-image: url(../Img/fondo.jpg);
     height: 100%;
     background-repeat: no-repeat;
@@ -333,9 +332,6 @@ main.maindates {
 
 }
 
-.fondoculture h2 {
-    font-size: 25px;
-}
 
 section.date {
     background: rgba(0, 0, 0, 0.8);
@@ -426,12 +422,6 @@ section.date aside button:disabled {
 
 footer.pie {
     grid-area: footer;
-    width: 100%;
-    background-color: #91d1b7;
-    padding-top: 15px;
-    padding-left: 15px;
-    display: flex;
-    justify-content: space-between;
 
 }
 /**-----------Media querys-----------*/
@@ -519,7 +509,6 @@ header.encabezadp {
 
 main.main-multi {
     grid-area: main;
-    grid-area: main;
     background-image: url(../Img/fondo.jpg);
     height: 100%;
     background-repeat: no-repeat;
@@ -592,8 +581,8 @@ section.multimedia aside {
 
 section.multimedia aside img {
     border: solid 3px rgb(90, 81, 81);
-    height: 350px;
-    width: 170px;
+    height: 350px !important;
+    width: 170px !important;
     margin-bottom: 30px;
 }
 
@@ -642,7 +631,7 @@ footer.pie {
 /*!------------------MERCHANDISING---------------------*/
 
 
-div.grid-container-merch {
+div.grid-container-merch{
     display: grid;
     grid-template-columns: 1fr;
     grid-template-rows: auto auto 150px;
@@ -652,7 +641,7 @@ div.grid-container-merch {
         "footer";
 }
 
-header.encabezadp {
+header.encabezado {
     grid-area: header;
 }
 
@@ -748,8 +737,6 @@ section.merch section.merch-oficial div.container-product div.card div.card-body
             "main"
             "footer";
     }
-
-
 
 }
 
