@@ -30,6 +30,61 @@ $font-size-xxlarge: 30px;
 
 $colors: rgb(255, 255, 255), rgb(240, 240, 240);
 
+//!MIXIN
+
+@mixin flex ($flex, $justify,$aling){
+    display: $flex;
+    justify-content: $justify;
+    align-items: $aling;
+}
+
+@mixin btn-styles($bg-color, $hover-color, $active-color) {
+    background-color: $bg-color;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+
+    &:hover {
+        background-color: $hover-color;
+    }
+    &:active {
+        background-color: $active-color;
+    }
+    &:focus {
+        outline: none;
+        box-shadow: 0 0 0 3px rgba(219, 0, 208, 0.5);
+    }
+    &:disabled {
+        background-color: #6c757d;
+        cursor: not-allowed;
+    }
+}
+
+//EXTEND
+
+%transition-hover-scale{
+    transition: 1.7s;
+    &:hover {
+    transform: scale(1.5);
+    }
+}
+
+%transition-hover-scale-otros{
+    transition: 1.7s;
+    &:hover {
+    transform: scale(1.15);
+    }
+}
+
+%centered-box {
+    text-align: center;
+    margin-bottom: 20px;
+    padding: 20px;
+    display: inline;
+    border: solid 3px rgb(255, 255, 255);
+}
+
+
+
 
 
 

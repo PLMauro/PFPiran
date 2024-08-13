@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /*La fuente, el reset, las clases y cosas que yo genere para pisar boodstrap*/
 /*----RESET------*/
 @import url("https://fonts.googleapis.com/css2?family=Azeret+Mono:ital,wght@1,600&display=swap");
@@ -11,6 +12,23 @@ body {
   color: black;
   width: 100%; }
 
+div.grid-container-merch main.maindates section.merch section.merch-oficial div.container-product div.card img {
+  transition: 1.7s; }
+  div.grid-container-merch main.maindates section.merch section.merch-oficial div.container-product div.card img:hover {
+    transform: scale(1.5); }
+
+div.grid-container-multi main.main-multi section.multimedia aside div.card, div.grid-container-culture main.mainculture article.cultureartist aside img, div.grid-container-culture main.mainculture section.aside-culture div.card img.card-img-top {
+  transition: 1.7s; }
+  div.grid-container-multi main.main-multi section.multimedia aside div.card:hover, div.grid-container-culture main.mainculture article.cultureartist aside img:hover, div.grid-container-culture main.mainculture section.aside-culture div.card img.card-img-top:hover {
+    transform: scale(1.15); }
+
+div.grid-container-dates main.maindates h1, div.grid-container-multi main.main-multi h1, div.grid-container-culture main.mainculture section.description-page h1, div.grid-container-merch main.maindates h1, div.grid-container-contacto main.main-contacto h1 {
+  text-align: center;
+  margin-bottom: 20px;
+  padding: 20px;
+  display: inline;
+  border: solid 3px white; }
+
 /*----HEADER------*/
 header.encabezado {
   background-color: black;
@@ -19,7 +37,11 @@ header.encabezado {
   padding: 15px;
   display: flex;
   justify-content: space-between;
-  align-items: center; }
+  align-items: center;
+  position: sticky;
+  top: 0;
+  width: 100%;
+  z-index: 1000; }
   header.encabezado nav.navbar {
     height: 100px;
     margin: 0px !important;
@@ -66,6 +88,14 @@ h3 {
   font-size: 24px !important;
   color: #f0f0f0 !important; }
 
+section.description-page {
+  background: rgba(0, 0, 0, 0.8);
+  margin-bottom: 20px;
+  padding: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center; }
+
 /*!----INDEX------*/
 div.grid-container-home {
   background-image: url(../Img/fondo.jpg);
@@ -80,12 +110,11 @@ div.grid-container-home {
   div.grid-container-home header.encabezado {
     grid-area: header; }
   div.grid-container-home main.home {
-    grid-area: main;
     display: flex;
-    flex-direction: column;
-    justify-items: center;
     justify-content: center;
     align-items: center;
+    grid-area: main;
+    flex-direction: column;
     padding: 15px; }
     div.grid-container-home main.home section.carrusel-home {
       height: 50%;
@@ -97,6 +126,10 @@ div.grid-container-home {
         border-radius: 8px;
         border-color: #050225;
         border: solid 3px; }
+        div.grid-container-home main.home section.carrusel-home div#carouselExampleCaptions div.carousel-inner h5 {
+          text-shadow: -1px -1px 0px black,  1px -1px 0px black, -1px 1px 0px black,  1px 1px 0px black; }
+        div.grid-container-home main.home section.carrusel-home div#carouselExampleCaptions div.carousel-inner p {
+          text-shadow: -1px -1px 0px black,  1px -1px 0px black, -1px 1px 0px black,  1px 1px 0px black; }
         div.grid-container-home main.home section.carrusel-home div#carouselExampleCaptions div.carousel-inner div.carousel-item .active img.d-block .w-100 .prueba-img-carrusel {
           height: 100%;
           width: 100%; }
@@ -110,16 +143,14 @@ div.grid-container-home {
     background: rgba(0, 0, 0, 0.6);
     grid-area: aside;
     display: flex;
-    flex-direction: column;
+    justify-content: center;
     align-items: center;
-    justify-items: center;
-    justify-content: center; }
+    flex-direction: column; }
     div.grid-container-home aside.aside-index div.propaganda-aside {
       display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-items: center;
       justify-content: center;
+      align-items: center;
+      flex-direction: column;
       margin: 30px; }
       div.grid-container-home aside.aside-index div.propaganda-aside div.card {
         background-color: #141414;
@@ -159,12 +190,6 @@ div.grid-container-dates {
     margin: 0%;
     display: flex;
     flex-direction: column; }
-    div.grid-container-dates main.maindates section.fondodates {
-      color: whitesmoke;
-      background: rgba(0, 0, 0, 0.8);
-      text-align: center;
-      margin-bottom: 20px;
-      padding: 10px; }
     div.grid-container-dates main.maindates section.date {
       background: rgba(0, 0, 0, 0.8);
       height: auto;
@@ -203,24 +228,25 @@ div.grid-container-dates {
         display: flex;
         flex-direction: column; }
         div.grid-container-dates main.maindates section.date aside img {
-          border: solid 3px #5a5151;
+          border: solid 1.5px #bb2c2c;
           height: 300px;
           width: 450px;
           margin-bottom: 30px; }
-        div.grid-container-dates main.maindates section.date aside button {
-          background-color: aliceblue; }
-        div.grid-container-dates main.maindates section.date aside button:hover {
-          background-color: blueviolet;
-          border-radius: 5px; }
-        div.grid-container-dates main.maindates section.date aside button:active {
-          background-color: #6ee22b;
-          border-radius: 5px; }
-        div.grid-container-dates main.maindates section.date aside button:focus {
-          outline: none;
-          box-shadow: 0 0 0 3px rgba(40, 167, 69, 0.5); }
-        div.grid-container-dates main.maindates section.date aside button:disabled {
-          background-color: #6c757d;
-          cursor: not-allowed; }
+        div.grid-container-dates main.maindates section.date aside a.btn-primary {
+          background-color: #bb2c2c;
+          border-radius: 5px;
+          transition: background-color 0.3s ease;
+          --bs-btn-border-color: none; }
+          div.grid-container-dates main.maindates section.date aside a.btn-primary:hover {
+            background-color: #a30404; }
+          div.grid-container-dates main.maindates section.date aside a.btn-primary:active {
+            background-color: red; }
+          div.grid-container-dates main.maindates section.date aside a.btn-primary:focus {
+            outline: none;
+            box-shadow: 0 0 0 3px rgba(219, 0, 208, 0.5); }
+          div.grid-container-dates main.maindates section.date aside a.btn-primary:disabled {
+            background-color: #6c757d;
+            cursor: not-allowed; }
   div.grid-container-dates footer.pie {
     grid-area: footer; }
 
@@ -243,14 +269,6 @@ div.grid-container-multi {
     margin: 0%;
     display: flex;
     flex-direction: column; }
-    div.grid-container-multi main.main-multi section.fondomulti {
-      color: whitesmoke;
-      background: rgba(0, 0, 0, 0.8);
-      text-align: center;
-      margin-bottom: 20px;
-      padding: 10px; }
-      div.grid-container-multi main.main-multi section.fondomulti h1 {
-        font-size: 25px; }
     div.grid-container-multi main.main-multi section.multimedia {
       background: rgba(0, 0, 0, 0.5);
       height: auto;
@@ -283,21 +301,39 @@ div.grid-container-multi {
         flex-direction: row;
         justify-content: space-evenly; }
         div.grid-container-multi main.main-multi section.multimedia aside div.card {
-          transition: 2s; }
+          background-color: #d1d1d1;
+          box-shadow: 9px 0px 30px 3px rgba(107, 0, 0, 0.67);
+          -webkit-box-shadow: 9px 0px 30px 3px rgba(107, 0, 0, 0.67);
+          -moz-box-shadow: 9px 0px 30px 3px rgba(107, 0, 0, 0.67); }
           div.grid-container-multi main.main-multi section.multimedia aside div.card img.img-multi {
             border: solid 1.5px #131212;
             height: 135px !important;
             width: 270px !important;
             margin-bottom: 30px; }
-          div.grid-container-multi main.main-multi section.multimedia aside div.card div.card-body h5 {
-            text-align: center !important; }
-          div.grid-container-multi main.main-multi section.multimedia aside div.card div.card-body p {
-            text-align: center !important; }
-          div.grid-container-multi main.main-multi section.multimedia aside div.card div.card-body a {
-            align-items: center !important;
-            width: 100% !important; }
-        div.grid-container-multi main.main-multi section.multimedia aside div.card:hover {
-          transform: scale(1.2); }
+          div.grid-container-multi main.main-multi section.multimedia aside div.card div.card-body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column; }
+            div.grid-container-multi main.main-multi section.multimedia aside div.card div.card-body h5 {
+              text-align: center !important; }
+            div.grid-container-multi main.main-multi section.multimedia aside div.card div.card-body p {
+              text-align: center !important; }
+            div.grid-container-multi main.main-multi section.multimedia aside div.card div.card-body a.btn-primary {
+              background-color: #bb2c2c;
+              border-radius: 5px;
+              transition: background-color 0.3s ease;
+              --bs-btn-border-color: none; }
+              div.grid-container-multi main.main-multi section.multimedia aside div.card div.card-body a.btn-primary:hover {
+                background-color: #a30404; }
+              div.grid-container-multi main.main-multi section.multimedia aside div.card div.card-body a.btn-primary:active {
+                background-color: red; }
+              div.grid-container-multi main.main-multi section.multimedia aside div.card div.card-body a.btn-primary:focus {
+                outline: none;
+                box-shadow: 0 0 0 3px rgba(219, 0, 208, 0.5); }
+              div.grid-container-multi main.main-multi section.multimedia aside div.card div.card-body a.btn-primary:disabled {
+                background-color: #6c757d;
+                cursor: not-allowed; }
   div.grid-container-multi footer.pie {
     grid-area: footer; }
 
@@ -305,7 +341,7 @@ div.grid-container-multi {
 div.grid-container-culture {
   display: grid;
   grid-template-columns: auto;
-  grid-template-rows: auto auto 150px;
+  grid-template-rows: 100px auto 150px;
   grid-template-areas: "header" "main" "footer"; }
   div.grid-container-culture header.encabezado {
     grid-area: header; }
@@ -320,14 +356,13 @@ div.grid-container-culture {
     margin: 0%;
     display: flex;
     flex-direction: column; }
-    div.grid-container-culture main.mainculture section.fondoculture {
-      color: whitesmoke;
+    div.grid-container-culture main.mainculture section.description-page {
       background: rgba(0, 0, 0, 0.8);
-      text-align: center;
       margin-bottom: 20px;
-      padding: 10px; }
-      div.grid-container-culture main.mainculture section.fondoculture h1 {
-        font-size: 25px; }
+      padding: 10px;
+      display: flex;
+      justify-content: center;
+      align-items: center; }
     div.grid-container-culture main.mainculture article.cultureartist {
       background: rgba(0, 0, 0, 0.8);
       height: auto;
@@ -358,13 +393,10 @@ div.grid-container-culture {
         display: flex;
         flex-direction: column; }
         div.grid-container-culture main.mainculture article.cultureartist aside img {
-          transition: 2s;
-          border: solid 3px #5a5151;
+          border: solid 3px #bb2c2c;
           height: 220px;
           width: 300px;
           margin-bottom: 30px; }
-        div.grid-container-culture main.mainculture article.cultureartist aside img:hover {
-          transform: scale(1.15); }
         div.grid-container-culture main.mainculture article.cultureartist aside iframe {
           width: 300px;
           height: 200px; }
@@ -372,9 +404,9 @@ div.grid-container-culture {
       grid-area: aside-culture;
       background: rgba(0, 0, 0, 0.6);
       display: flex;
-      flex-direction: row;
       justify-content: space-around;
-      justify-items: center;
+      align-items: center;
+      flex-direction: row;
       flex-wrap: wrap;
       height: auto; }
       div.grid-container-culture main.mainculture section.aside-culture div.card {
@@ -386,6 +418,25 @@ div.grid-container-culture {
         div.grid-container-culture main.mainculture section.aside-culture div.card div.card-body h5 {
           text-decoration: underline;
           font-weight: bold; }
+        div.grid-container-culture main.mainculture section.aside-culture div.card div.card-body a.btn-primary {
+          background-color: #bb2c2c;
+          border-radius: 5px;
+          transition: background-color 0.3s ease;
+          --bs-btn-border-color: none; }
+          div.grid-container-culture main.mainculture section.aside-culture div.card div.card-body a.btn-primary:hover {
+            background-color: #a30404; }
+          div.grid-container-culture main.mainculture section.aside-culture div.card div.card-body a.btn-primary:active {
+            background-color: red; }
+          div.grid-container-culture main.mainculture section.aside-culture div.card div.card-body a.btn-primary:focus {
+            outline: none;
+            box-shadow: 0 0 0 3px rgba(219, 0, 208, 0.5); }
+          div.grid-container-culture main.mainculture section.aside-culture div.card div.card-body a.btn-primary:disabled {
+            background-color: #6c757d;
+            cursor: not-allowed; }
+        div.grid-container-culture main.mainculture section.aside-culture div.card div.card-body a {
+          align-items: center !important;
+          width: 100% !important;
+          background-color: #bb2c2c; }
         div.grid-container-culture main.mainculture section.aside-culture div.card div.card-body a.card-link {
           font-weight: bold;
           text-decoration: none; }
@@ -411,50 +462,63 @@ div.grid-container-merch {
     margin: 0%;
     display: flex;
     flex-direction: column; }
-    div.grid-container-merch main.maindates div.catalogo {
-      color: whitesmoke;
-      background: rgba(0, 0, 0, 0.815);
-      text-align: center;
-      margin-bottom: 20px;
-      padding-top: 10px;
-      padding-bottom: 10px; }
-      div.grid-container-merch main.maindates div.catalogo h1 {
-        font-size: 30px; }
+    div.grid-container-merch main.maindates a {
+      color: whitesmoke; }
     div.grid-container-merch main.maindates section.merch {
       text-align: center;
-      border: solid 3px #5a5151;
+      border: solid 1.5px #5a5151;
       background-color: rgba(0, 0, 0, 0.9); }
       div.grid-container-merch main.maindates section.merch section.merch-oficial {
         display: flex;
         flex-direction: column; }
-        div.grid-container-merch main.maindates section.merch section.merch-oficial div.producto {
+        div.grid-container-merch main.maindates section.merch section.merch-oficial h2 {
+          color: whitesmoke;
           text-align: center;
           padding: 10px;
-          border: solid 3px #5a5151;
+          border: solid 1.5px #5a5151;
           background-color: rgba(0, 0, 0, 0.438); }
-          div.grid-container-merch main.maindates section.merch section.merch-oficial div.producto h2 {
-            color: whitesmoke;
-            font-size: 25px; }
         div.grid-container-merch main.maindates section.merch section.merch-oficial div.container-product {
           display: flex;
           flex-direction: row;
           justify-content: space-around; }
           div.grid-container-merch main.maindates section.merch section.merch-oficial div.container-product div.card {
+            background-color: #e0e0e0;
+            box-shadow: 9px 0px 30px 3px rgba(107, 0, 0, 0.67);
+            -webkit-box-shadow: 9px 0px 30px 3px rgba(107, 0, 0, 0.67);
+            -moz-box-shadow: 9px 0px 30px 3px rgba(107, 0, 0, 0.67);
             margin: 20px !important;
-            padding: 10px !important; }
-            div.grid-container-merch main.maindates section.merch section.merch-oficial div.container-product div.card img {
-              transition: 1.7s; }
-            div.grid-container-merch main.maindates section.merch section.merch-oficial div.container-product div.card img:hover {
-              transform: scale(1.5); }
+            padding: 10px !important;
+            width: 290px !important; }
+            div.grid-container-merch main.maindates section.merch section.merch-oficial div.container-product div.card a {
+              align-items: center !important;
+              width: 100% !important;
+              background-color: #bb2c2c; }
+            div.grid-container-merch main.maindates section.merch section.merch-oficial div.container-product div.card a.btn-primary {
+              background-color: #bb2c2c;
+              border-radius: 5px;
+              transition: background-color 0.3s ease;
+              --bs-btn-border-color: none; }
+              div.grid-container-merch main.maindates section.merch section.merch-oficial div.container-product div.card a.btn-primary:hover {
+                background-color: #a30404; }
+              div.grid-container-merch main.maindates section.merch section.merch-oficial div.container-product div.card a.btn-primary:active {
+                background-color: red; }
+              div.grid-container-merch main.maindates section.merch section.merch-oficial div.container-product div.card a.btn-primary:focus {
+                outline: none;
+                box-shadow: 0 0 0 3px rgba(219, 0, 208, 0.5); }
+              div.grid-container-merch main.maindates section.merch section.merch-oficial div.container-product div.card a.btn-primary:disabled {
+                background-color: #6c757d;
+                cursor: not-allowed; }
             div.grid-container-merch main.maindates section.merch section.merch-oficial div.container-product div.card div.card-body {
               align-items: center !important; }
               div.grid-container-merch main.maindates section.merch section.merch-oficial div.container-product div.card div.card-body h5.card-title {
                 text-decoration: underline; }
               div.grid-container-merch main.maindates section.merch section.merch-oficial div.container-product div.card div.card-body p.card-text {
                 font-size: 13px; }
-            div.grid-container-merch main.maindates section.merch section.merch-oficial div.container-product div.card ul.list-group .list-group-flush li.list-group-item {
-              padding: 5px !important;
-              font-size: 14px; }
+            div.grid-container-merch main.maindates section.merch section.merch-oficial div.container-product div.card ul {
+              border: 2px solid rgba(255, 123, 123, 0.308); }
+          div.grid-container-merch main.maindates section.merch section.merch-oficial div.container-product div.card:hover {
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+            /* Sombra más intensa al pasar el cursor */ }
   div.grid-container-merch footer.pie {
     grid-area: footer; }
 
@@ -462,7 +526,7 @@ div.grid-container-merch {
 div.grid-container-contacto {
   display: grid;
   grid-template-columns: auto;
-  grid-template-rows: 100px auto 150px;
+  grid-template-rows: auto auto 150px;
   grid-template-areas: "header" "main" "footer"; }
   div.grid-container-contacto header.encabezado {
     grid-area: header; }
@@ -474,20 +538,9 @@ div.grid-container-contacto {
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
-    width: 100%;
-    margin: 0%; }
-    div.grid-container-contacto main.main-contacto div.vision {
-      display: flex;
-      justify-content: center;
-      height: 100px;
-      background-color: rgba(0, 0, 0, 0.9);
-      align-items: center;
-      color: whitesmoke; }
-      div.grid-container-contacto main.main-contacto div.vision h1 {
-        font-size: 30px; }
+    width: 100%; }
     div.grid-container-contacto main.main-contacto section.nosotros {
       background: rgba(0, 0, 0, 0.8);
-      border: 3px solid #6e6e6c;
       color: whitesmoke;
       margin-bottom: 25px;
       padding-top: 15px;
@@ -501,22 +554,21 @@ div.grid-container-contacto {
         padding-right: 10px;
         text-align: justify; }
       div.grid-container-contacto main.main-contacto section.nosotros img {
+        transition: 1.7s;
         width: 530px;
         height: 340px;
-        border: solid 2.5px #5a5151;
-        text-align: justify;
+        border: solid 3px #bb2c2c;
         margin: 10px; }
+      div.grid-container-contacto main.main-contacto section.nosotros img:hover {
+        transform: scale(1.038); }
     div.grid-container-contacto main.main-contacto div.escuela {
       background-color: rgba(0, 0, 0, 0.6); }
-      div.grid-container-contacto main.main-contacto div.escuela div.clases {
-        display: flex;
-        justify-content: center;
-        height: 100px;
-        background-color: rgba(0, 0, 0, 0.8);
-        align-items: center;
-        color: whitesmoke; }
-        div.grid-container-contacto main.main-contacto div.escuela div.clases h2 {
-          font-size: 30px; }
+      div.grid-container-contacto main.main-contacto div.escuela h2 {
+        color: whitesmoke;
+        background: rgba(0, 0, 0, 0.8);
+        text-align: center;
+        padding: 30px;
+        margin-bottom: 0px; }
       div.grid-container-contacto main.main-contacto div.escuela section.academia {
         display: flex;
         flex-direction: row;
@@ -526,7 +578,7 @@ div.grid-container-contacto {
           background-repeat: no-repeat;
           background-size: cover;
           background-position: center;
-          border: 3px solid #6e6e6c; }
+          border: 1.5px solid #bb2c2c; }
           div.grid-container-contacto main.main-contacto div.escuela section.academia div.curso div.capa-transparencia {
             background-color: rgba(0, 0, 0, 0.6); }
             div.grid-container-contacto main.main-contacto div.escuela section.academia div.curso div.capa-transparencia h3 {
@@ -542,7 +594,7 @@ div.grid-container-contacto {
             div.grid-container-contacto main.main-contacto div.escuela section.academia div.curso div.capa-transparencia a {
               text-decoration: none;
               background-color: black;
-              color: #cf4cb9;
+              color: #bb2c2c;
               margin-left: 10px; }
         div.grid-container-contacto main.main-contacto div.escuela section.academia div.curso-dos {
           background-image: url(../Img/curso-dj.jpg);
@@ -550,7 +602,7 @@ div.grid-container-contacto {
           background-size: cover;
           background-position: center;
           font-size: 18px;
-          border: 3px solid #6e6e6c;
+          border: 1.5px solid #bb2c2c;
           border-left: none; }
           div.grid-container-contacto main.main-contacto div.escuela section.academia div.curso-dos div.capa-transparencia {
             background-color: rgba(0, 0, 0, 0.6); }
@@ -567,7 +619,7 @@ div.grid-container-contacto {
             div.grid-container-contacto main.main-contacto div.escuela section.academia div.curso-dos div.capa-transparencia a {
               text-decoration: none;
               background-color: black;
-              color: #cf4cb9;
+              color: #bb2c2c;
               margin-left: 10px; }
       div.grid-container-contacto main.main-contacto div.escuela div.contacto {
         background: rgba(0, 0, 0, 0.6);
@@ -577,7 +629,6 @@ div.grid-container-contacto {
           padding-top: 15px;
           padding-bottom: 15px;
           text-align: center;
-          border: 3px solid #6e6e6c;
           border-top: none; }
           div.grid-container-contacto main.main-contacto div.escuela div.contacto div.equipo h2 {
             font-size: 25px; }
@@ -628,6 +679,26 @@ footer {
       margin-bottom: 8px;
       margin: 10px; }
 
+@media screen and (max-width: 490px) {
+  body h1 {
+    font-size: 26px !important; }
+  body h2 {
+    font-size: 24px !important; }
+  body h3 {
+    font-size: 22px !important; }
+  body p {
+    font-size: 16px !important; } }
+
+@media screen and (max-width: 350px) {
+  body h1 {
+    font-size: 24px !important; }
+  body h2 {
+    font-size: 22px !important; }
+  body h3 {
+    font-size: 20px !important; }
+  body p {
+    font-size: 14px !important; } }
+
 @media screen and (max-width: 610px) {
   footer.pie {
     grid-area: footer;
@@ -658,7 +729,15 @@ footer {
         width: 340px; }
   aside.aside-index {
     flex-direction: row !important;
-    padding-top: 15px; } }
+    padding-top: 15px; }
+    aside.aside-index div.propaganda-aside div.card {
+      width: 288px !important;
+      height: 370px !important; }
+      aside.aside-index div.propaganda-aside div.card p {
+        font-size: 13px !important; }
+      aside.aside-index div.propaganda-aside div.card img {
+        width: 280px !important;
+        height: 181px !important; } }
 
 @media screen and (max-width: 860px) {
   div.grid-container-home {
@@ -697,13 +776,7 @@ footer {
     margin: 0px;
     padding: 0px; }
     div.grid-container-home aside.aside-index div.propaganda-aside {
-      margin: 5px; }
-    div.grid-container-home aside.aside-index div.card {
-      width: 288px !important;
-      height: 370px !important; }
-      div.grid-container-home aside.aside-index div.card img {
-        width: 280px !important;
-        height: 181px !important; } }
+      margin: 5px; } }
 
 @media screen and (max-width: 920px) {
   div.grid-container-dates main.maindates section.date {
@@ -800,16 +873,31 @@ footer {
     div.grid-container-culture main.mainculture article.cultureartist aside {
       padding: 10px; } }
 
+@media screen and (max-width: 490px) {
+  div.grid-container-culture main.mainculture h1 {
+    font-size: 26px !important; }
+  div.grid-container-culture main.mainculture h2 {
+    font-size: 24px !important; }
+  div.grid-container-culture main.mainculture p {
+    font-size: 16px !important; } }
+
 @media screen and (max-width: 350px) {
+  div.grid-container-culture main.mainculture section.fondoculture h1 {
+    font-size: 24px !important; }
+  div.grid-container-culture main.mainculture article.cultureartist div.artist h2 {
+    font-size: 22px !important; }
   div.grid-container-culture main.mainculture article.cultureartist div.artist p {
-    padding: 5px; }
+    padding: 5px;
+    font-size: 14px !important; }
   div.grid-container-culture main.mainculture article.cultureartist aside {
     padding: 10px;
     padding-left: 0px;
     padding-right: 0px; }
     div.grid-container-culture main.mainculture article.cultureartist aside img.artista {
       width: 240px;
-      height: 170px; } }
+      height: 170px; }
+  div.grid-container-culture main.mainculture section.aside-culture {
+    display: none; } }
 
 @media screen and (max-width: 950px) {
   div.grid-container-merch {
@@ -819,6 +907,11 @@ footer {
     grid-template-areas: "header" "main" "footer"; }
     div.grid-container-merch main.maindates section.merch section.merch-oficial div.container-product {
       flex-wrap: wrap; } }
+
+@media screen and (max-width: 420px) {
+  div.grid-container-merch main.maindates section.merch section.merch-oficial div.container-product div.card {
+    margin: 10px !important;
+    width: 250px !important; } }
 
 @media screen and (max-width: 1020px) {
   div.grid-container-contacto main.main-contacto section.nosotros {
@@ -850,3 +943,13 @@ footer {
   div.grid-container-contacto main.main-contacto section.nosotros img {
     width: 380px;
     height: 240px; } }
+
+@media screen and (max-width: 430px) {
+  div.grid-container-contacto main.main-contacto section.nosotros img {
+    width: 250px;
+    height: 200px; } }
+
+@media screen and (max-width: 410px) {
+  div.grid-container-contacto main.main-contacto div.escuela div.contacto div.msj textarea {
+    width: 270px;
+    height: 135px; } }

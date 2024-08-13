@@ -1,3 +1,41 @@
+
+@media screen and (max-width:490px){
+    body{       
+        h1{
+            font-size: 26px !important;
+        }
+        h2{
+            font-size: 24px !important;
+        }
+        h3{
+            font-size: 22px !important;
+        }
+        p{
+            font-size: 16px !important;
+        }    
+    }
+}
+
+@media screen and (max-width:350px){
+    body{
+        
+            h1{
+                font-size: 24px !important;
+            }
+            h2{
+                font-size: 22px !important;
+            }
+            h3{
+                font-size: 20px !important;
+            }
+            p{
+                font-size: 14px !important;
+            }
+        
+        }
+    }
+
+
 //footer
 
 @media screen and (max-width:610px) {
@@ -45,8 +83,21 @@
             aside.aside-index {
                 flex-direction: row !important;
                 padding-top: 15px;
+                div.propaganda-aside{
+                    div.card{
+                        width: 288px !important;
+                        height: 370px !important;
+                        p{
+                            font-size: 13px !important;
+                        }
+                        img{
+                            width: 280px !important;
+                            height:181px !important;
+                        }
+                        
+                    }
+                }
             }
-
 }
 
 
@@ -109,15 +160,6 @@
             padding: 0px;
             div.propaganda-aside{
                 margin: 5px;
-            }
-            div.card{
-                width: 288px !important;
-                height: 370px !important;
-                img{
-                    width: 280px !important;
-                    height:181px !important;
-                }
-                
             }
         }
     }
@@ -323,13 +365,38 @@
     }
 }
 
+@media screen and (max-width:490px) {
+    div.grid-container-culture{
+        main.mainculture{
+            h1{
+                font-size: 26px !important;
+            }
+            h2{
+                font-size: 24px !important;
+            }
+            p{
+                font-size: 16px !important;
+            }
+        }
+    }
+}
+
 @media screen and (max-width:350px){
     div.grid-container-culture {       
         main.mainculture{
+            section.fondoculture{
+                h1{
+                    font-size: 24px !important;
+                }
+            }
             article.cultureartist{
                 div.artist{
+                    h2{
+                        font-size: 22px !important;
+                    }
                     p{
                         padding: 5px;
+                        font-size: 14px !important;
                     }
                 }
                 aside{
@@ -342,6 +409,9 @@
                     }
 
                 }
+            }
+            section.aside-culture{
+                display: none;
             }
         }
     }
@@ -361,6 +431,24 @@
                 section.merch-oficial{
                     div.container-product{
                         flex-wrap: wrap;
+
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width:420px){
+    div.grid-container-merch {
+        main.maindates{
+            section.merch{
+                section.merch-oficial{
+                    div.container-product{
+                        div.card{
+                            margin: 10px !important;
+                            width: 250px !important;
+                        }
 
                     }
                 }
@@ -443,3 +531,37 @@
         }
     }
 }
+
+
+@media screen and (max-width:430px){
+    div.grid-container-contacto{
+        main.main-contacto{
+            section.nosotros{
+                img{
+                    width: 250px;
+                    height: 200px;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width:410px){
+    div.grid-container-contacto{
+        main.main-contacto{
+            div.escuela{
+                div.contacto{
+                    div.msj{
+                        textarea{
+                            width: 270px;
+                            height: 135px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+

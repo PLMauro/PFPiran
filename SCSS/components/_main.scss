@@ -19,7 +19,14 @@ h3{
     font-size: $font-size-large !important;
     color: nth($colors, 2 ) !important;
 }
+section.description-page{
+    background: rgba(0, 0, 0, 0.8);
+    margin-bottom: 20px;
+    padding: 10px;
+    @include flex (flex, center, center);
 
+
+}
 
 /*!----INDEX------*/
 
@@ -45,12 +52,9 @@ div.grid-container-home {
     }
 
     main.home {
+        @include flex (flex, center, center);
         grid-area: main;
-        display: flex;
         flex-direction: column;
-        justify-items: center;
-        justify-content: center;
-        align-items: center;
         padding: 15px;
 
         section.carrusel-home {
@@ -65,6 +69,20 @@ div.grid-container-home {
                     border-radius: 8px;
                     border-color: rgb(5, 2, 37);
                     border: solid 3px;
+                    h5{
+                        text-shadow: 
+                            -1px -1px 0px black, 
+                            1px -1px 0px black,
+                            -1px 1px 0px black, 
+                            1px 1px 0px black;
+                    }
+                    p{
+                        text-shadow: 
+                            -1px -1px 0px black, 
+                            1px -1px 0px black,
+                            -1px 1px 0px black, 
+                            1px 1px 0px black;
+                    }
                     div.carousel-item .active{
                         
                         img.d-block .w-100 .prueba-img-carrusel{
@@ -95,18 +113,12 @@ div.grid-container-home {
     aside.aside-index {
         background: rgba(0, 0, 0, 0.6);
         grid-area: aside;
-        display: flex;
+        @include flex (flex, center, center);
         flex-direction: column;
-        align-items: center;
-        justify-items: center;
-        justify-content: center;
 
         div.propaganda-aside {
-            display: flex;
+            @include flex (flex, center, center);
             flex-direction: column;
-            align-items: center;
-            justify-items: center;
-            justify-content: center;
             margin: 30px;
             
             div.card {
@@ -166,12 +178,8 @@ div.grid-container-dates{
         display: flex;
         flex-direction: column;
 
-        section.fondodates{
-            color: whitesmoke;
-            background: rgba(0, 0, 0, 0.8);
-            text-align: center;
-            margin-bottom: 20px;
-            padding: 10px;
+        h1{
+            @extend %centered-box;
 
         }
 
@@ -223,30 +231,16 @@ div.grid-container-dates{
                 padding: 35px;
                 display: flex;
                 flex-direction: column;
+                
                 img{
-                    border: solid 3px rgb(90, 81, 81);
+                    border: solid 1.5px #bb2c2c;
                     height: 300px;
                     width: 450px;
                     margin-bottom: 30px;
                 }
-                button{
-                    background-color: aliceblue;
-                }
-                button:hover{
-                    background-color: blueviolet;
-                    border-radius: 5px;
-                }
-                button:active{
-                    background-color: rgb(110, 226, 43);
-                    border-radius: 5px;
-                }
-                button:focus{
-                    outline: none;
-                    box-shadow: 0 0 0 3px rgba(40, 167, 69, 0.5);
-                }
-                button:disabled{
-                    background-color: #6c757d;
-                    cursor: not-allowed;
+                a.btn-primary{
+                    @include btn-styles(#bb2c2c, rgb(163, 4, 4), rgb(255, 0, 0));
+                    --bs-btn-border-color: none;
                 }
             }
         }
@@ -282,15 +276,9 @@ div.grid-container-multi{
         margin: 0%;
         display: flex;
         flex-direction: column;
-        section.fondomulti{
-            color: whitesmoke;
-            background: rgba(0, 0, 0, 0.8);
-            text-align: center;
-            margin-bottom: 20px;
-            padding: 10px;
-            h1{
-                font-size: 25px;
-            }
+        h1{
+            @extend %centered-box;
+
         }
         section.multimedia{
             background: rgba(0, 0, 0, 0.5);
@@ -327,8 +315,11 @@ div.grid-container-multi{
                 flex-direction: row;
                 justify-content: space-evenly;
                 div.card{
-                    transition: 2s;
-
+                    @extend %transition-hover-scale-otros;
+                    background-color: rgb(209, 209, 209);
+                    box-shadow: 9px 0px 30px 3px rgba(107,0,0,0.67);
+                    -webkit-box-shadow: 9px 0px 30px 3px rgba(107,0,0,0.67);
+                    -moz-box-shadow: 9px 0px 30px 3px rgba(107,0,0,0.67);
                     img.img-multi{
                         border: solid 1.5px rgb(19, 18, 18);
                         height: 135px !important;
@@ -336,21 +327,19 @@ div.grid-container-multi{
                         margin-bottom: 30px;
                     }
                     div.card-body{
+                        @include flex (flex, center, center);
+                        flex-direction: column;
                         h5{
                             text-align: center !important;
                         }
                         p{
                             text-align: center !important;
                         }
-                        a{
-                            align-items: center !important;
-                            width: 100% !important;
-                        }                     
+                        a.btn-primary{
+                            @include btn-styles(#bb2c2c, rgb(163, 4, 4), rgb(255, 0, 0));
+                            --bs-btn-border-color: none;
+                            }
                     }
-                }
-                div.card:hover{
-                    transform: scale(1.2);
-
                 }
                 
             }
@@ -367,7 +356,7 @@ div.grid-container-multi{
 div.grid-container-culture {
     display: grid;
     grid-template-columns: auto;
-    grid-template-rows: auto auto 150px;
+    grid-template-rows: 100px auto 150px;
     grid-template-areas:
         "header"
         "main"
@@ -389,19 +378,15 @@ div.grid-container-culture {
         display: flex;
         flex-direction: column;
 
-
-        section.fondoculture {
-            color: whitesmoke;
+        section.description-page{
             background: rgba(0, 0, 0, 0.8);
-            text-align: center;
             margin-bottom: 20px;
             padding: 10px;
-
-            h1 {
-                font-size: 25px;
+            @include flex (flex, center, center);
+            h1{
+                @extend %centered-box;   
             }
         }
-
         article.cultureartist {
             background: rgba(0, 0, 0, 0.8);
             height: auto;
@@ -446,15 +431,13 @@ div.grid-container-culture {
                 flex-direction: column;
 
                 img {
-                    transition: 2s;
-                    border: solid 3px rgb(90, 81, 81);
+                    @extend %transition-hover-scale-otros;
+                    border: solid 3px #bb2c2c;
                     height: 220px;
                     width: 300px;
                     margin-bottom: 30px;
                 }
-                img:hover{
-                    transform: scale(1.15);
-                }
+
 
                 iframe {
                     width: 300px;
@@ -467,10 +450,8 @@ div.grid-container-culture {
         section.aside-culture {
             grid-area: aside-culture;
             background: rgba(0, 0, 0, 0.6);
-            display: flex;
+            @include flex (flex, space-around, center);
             flex-direction: row;
-            justify-content: space-around;
-            justify-items: center;
             flex-wrap: wrap;
             height: auto;
 
@@ -480,6 +461,7 @@ div.grid-container-culture {
                 
 
                 img.card-img-top {
+                    @extend %transition-hover-scale-otros;
                     width: 100%;
                     height: 150px;
                 }
@@ -489,7 +471,16 @@ div.grid-container-culture {
                         text-decoration: underline;
                         font-weight: bold
                     }
-
+                    a.btn-primary{
+                        @include btn-styles(#bb2c2c, rgb(163, 4, 4), rgb(255, 0, 0));
+                        --bs-btn-border-color: none;
+                        }
+                    a{
+                        align-items: center !important;
+                        width: 100% !important;
+                        background-color: #bb2c2c;
+                        
+                    }
                     a.card-link {
                         font-weight: bold;
                         text-decoration: none;
@@ -528,47 +519,54 @@ div.grid-container-merch{
         margin: 0%;
         display: flex;
         flex-direction: column;
-        div.catalogo{
+        a{
             color: whitesmoke;
-            background: rgba(0, 0, 0, 0.815);
-            text-align: center;
-            margin-bottom: 20px;
-            padding-top: 10px;
-            padding-bottom: 10px;
-            h1{
-                font-size: 30px;
-            }
+        }
+        h1{
+            @extend %centered-box;
+
         }
         section.merch{
             text-align: center;
-            border: solid 3px rgb(90, 81, 81);
+            border: solid 1.5px rgb(90, 81, 81);
             background-color: rgba(0, 0, 0, 0.9);
             section.merch-oficial{
                 display: flex;
                 flex-direction: column;
-                div.producto{
+                h2{
+                    color: whitesmoke;
                     text-align: center;
                     padding: 10px;
-                    border: solid 3px rgb(90, 81, 81);
+                    border: solid 1.5px rgb(90, 81, 81);
                     background-color: rgba(0, 0, 0, 0.438);
-                    h2{
-                        color: whitesmoke;
-                        font-size: 25px;
-                    }
                 }
                 div.container-product{
                     display: flex;
                     flex-direction: row;
                     justify-content: space-around;
+                    
 
                     div.card{
+                        background-color: #e0e0e0; 
+                        box-shadow: 9px 0px 30px 3px rgba(107,0,0,0.67);
+                            -webkit-box-shadow: 9px 0px 30px 3px rgba(107,0,0,0.67);
+                            -moz-box-shadow: 9px 0px 30px 3px rgba(107,0,0,0.67);
                         margin: 20px !important;
                         padding: 10px !important;
-                        img{
-                            transition:1.7s;
+                        width: 290px !important;
+
+                        a{
+                            align-items: center !important;
+                            width: 100% !important;
+                            background-color: #bb2c2c;
                         }
-                        img:hover{
-                            transform: scale(1.5);
+                        a.btn-primary{
+                            @include btn-styles(#bb2c2c, rgb(163, 4, 4), rgb(255, 0, 0));
+                            --bs-btn-border-color: none;
+                            }
+                        img{
+                            @extend %transition-hover-scale;
+
                         }
                         div.card-body{
                             align-items: center !important;
@@ -579,14 +577,14 @@ div.grid-container-merch{
                                 font-size: 13px;
                             }
                         }
-                        ul.list-group .list-group-flush{
-                            li.list-group-item{
-                                padding: 5px !important;
-                                font-size: 14px;
-                            }
-                            
+                        ul{
+                            border: 2px solid rgba(255, 123, 123, 0.308);
                         }
                     }
+                    div.card:hover {
+                        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Sombra más intensa al pasar el cursor */
+                    }
+
                 }
 
             }
@@ -603,7 +601,7 @@ div.grid-container-merch{
 div.grid-container-contacto {
     display: grid;
     grid-template-columns: auto;
-    grid-template-rows: 100px auto 150px;
+    grid-template-rows: auto auto 150px;
     grid-template-areas:
         "header"
         "main"
@@ -622,24 +620,13 @@ div.grid-container-contacto {
         background-position: center;
         background-attachment: fixed;
         width: 100%;
-        margin: 0%;
-
-        div.vision {
-            display: flex;
-            justify-content: center;
-            height: 100px;
-            background-color: rgba(0, 0, 0, 0.9);
-            align-items: center;
-            color: whitesmoke;
-
-            h1 {
-                font-size: 30px;
+            h1{
+                @extend %centered-box;
+    
             }
-        }
 
         section.nosotros {
             background: rgba(0, 0, 0, 0.8);
-            border: 3px solid rgb(110, 110, 108);
             color: whitesmoke;
             margin-bottom: 25px;
             padding-top: 15px;
@@ -660,28 +647,27 @@ div.grid-container-contacto {
             }
 
             img {
+                transition: 1.7s;
                 width: 530px;
                 height: 340px;
-                border: solid 2.5px rgb(90, 81, 81);
-                text-align: justify;
+                border: solid 3px #bb2c2c;
                 margin: 10px;
+            }
+            img:hover{
+                transform: scale(1.038);
             }
         }
 
         div.escuela {
             background-color: rgba(0, 0, 0, 0.6);
 
-            div.clases {
-                display: flex;
-                justify-content: center;
-                height: 100px;
-                background-color: rgba(0, 0, 0, 0.8);
-                align-items: center;
+            h2 {
                 color: whitesmoke;
+                background: rgba(0, 0, 0, 0.8);
+                text-align: center;
+                padding: 30px;
+                margin-bottom: 0px;
 
-                h2 {
-                    font-size: 30px;
-                }
             }
 
             section.academia {
@@ -694,10 +680,10 @@ div.grid-container-contacto {
                     background-repeat: no-repeat;
                     background-size: cover;
                     background-position: center;                   
-                    border: 3px solid rgb(110, 110, 108);
+                    border: 1.5px solid #bb2c2c;
                     
                     div.capa-transparencia{
-                        background-color: rgba(0, 0, 0, 0.6);
+                        background-color: rgba(0, 0, 0, 0.6);                       
 
                         h3 {
                             text-align: center;
@@ -721,7 +707,7 @@ div.grid-container-contacto {
                         a {
                             text-decoration: none;
                             background-color: black;
-                            color: rgb(207, 76, 185);
+                            color:#bb2c2c;
                             margin-left: 10px;
                         }
 
@@ -736,10 +722,11 @@ div.grid-container-contacto {
                     background-size: cover;
                     background-position: center;
                     font-size: 18px;
-                    border: 3px solid rgb(110, 110, 108);
+                    border: 1.5px solid #bb2c2c;
                     border-left: none;
                     div.capa-transparencia{
                         background-color: rgba(0, 0, 0, 0.6);
+                        
                         h3 {
                             text-align: center;
                             font-size: 26px;
@@ -761,7 +748,7 @@ div.grid-container-contacto {
                         a {
                             text-decoration: none;
                             background-color: black;
-                            color: rgb(207, 76, 185);
+                            color:#bb2c2c;
                             margin-left: 10px;
                         }
 
@@ -780,7 +767,6 @@ div.grid-container-contacto {
                     padding-top: 15px;
                     padding-bottom: 15px;
                     text-align: center;
-                    border: 3px solid rgb(110, 110, 108);
                     border-top: none;
 
                     h2 {
